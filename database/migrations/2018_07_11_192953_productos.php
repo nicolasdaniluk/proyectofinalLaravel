@@ -26,7 +26,7 @@ class Productos extends Migration
           $table->foreign('categoria')->references('id')->on('categorias');
       });
 
-      \DB::table('categorias')->insert([
+      \DB::table('productos')->insert([
         [ 'nombre'=>'cama de pino','descripcion' => 'campa re linda de madera de pinon','imagen'=>'productos/sinFoto.jpg','precio' => '3000','categoria'=>1],
         [ 'nombre'=>'cama piola','descripcion' => 'cama lindaaaahhh','imagen'=>'productos/sinFoto.jpg','precio' => '3600','categoria'=>1],
         [ 'nombre'=>' otra cama','descripcion' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor faucibus vulputate. Quisque gravida scelerisque sapien, a condimentum lectus viverra nec. Quisque tortor est, dictum in orci tempor, imperdiet semper metus.','imagen'=>'productos/sinFoto.jpg','precio' => '2000','categoria'=>1],

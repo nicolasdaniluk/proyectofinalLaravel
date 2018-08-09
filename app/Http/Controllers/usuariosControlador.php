@@ -105,7 +105,7 @@ class usuariosControlador extends Controller
 
     public function borrar($id){
         $usuario= User::find($id);
-        $producto->delete();
+        $usuario->delete();
         return redirect('/productos/listar');
     }
 }

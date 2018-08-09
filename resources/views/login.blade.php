@@ -4,7 +4,7 @@
 
           <div class="caja">
             <div class="formulario">
-            <form  method="post" enctype="multipart/form-data">
+            <form  method="post" enctype="multipart/form-data" id="login">
                 <fieldset>
                   <legend><h2>Ingresar</h2></legend>
                   <div class="data-form">
@@ -49,5 +49,5 @@
             </form>
           </div>
         </div>
-
+  <script  src="/js/loginVal.js"></script>
 @endsection

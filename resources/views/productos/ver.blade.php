@@ -21,7 +21,8 @@
     @endif
       <div style="text-align:center;"><img style="width:15%;" src="{{\Storage::url($producto->imagen)}}" alt="" ></div>
     <h4 style="text-align:center;">Categoria:   <a href=" {{route('producto.verCategoria', [ 'nombre' => $categoria->nombre ])}}">{{$categoria->nombre}}</a></h4>
-    <h2 style="text-align:center;">Precio: ${{$producto->precio}}</h3>
+    <!-- <h4>style="text-align:center;">Vendedor:  <a href="{{route('usuario.perfil', [ 'id' => $usuario->id ])}}">{{$usuario->nombre}}</a></h4>
+    --><h2 style="text-align:center;">Precio: ${{$producto->precio}}</h3>
     <p style="text-align: justify; margin:2% 0 0 25%;width:50%;">{{$producto->descripcion}}</p>
 
 

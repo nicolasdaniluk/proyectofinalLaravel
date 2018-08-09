@@ -4,7 +4,7 @@
 
   <div class="caja">
     <div class="formulario">
-      <form method="POST" enctype="multipart/form-data" action="/productos/agregar">
+      <form method="POST" enctype="multipart/form-data" action="/productos/agregar" id="publish">
         {{ csrf_field() }}
         <fieldset>
             <legend>Producto</legend>
@@ -16,6 +16,7 @@
                   @if ($errors->has('nombre'))
                     <span class="text-danger">{{$errors->first('name')}}</span>
                   @endif
+                  <div class=""> </div>
                 </div>
               </div>
               <div class="col-sm-6">
@@ -25,6 +26,7 @@
                   @if ($errors->has('descripcion'))
                     <span class="text-danger">{{$errors->first('descripcion')}}</span>
                   @endif
+                  <div class=""> </div>
                 </div>
               </div>
             </div>
@@ -36,6 +38,7 @@
                   @if ($errors->has('precio'))
                     <span class="text-danger">{{$errors->first('price')}}</span>
                   @endif
+                  <div class=""> </div>
                 </div>
               </div>
               <div class="col-sm-6">
@@ -61,6 +64,7 @@
                 @if ($errors->has('image'))
                   <span class="text-danger">{{$errors->first('image')}}</span>
                 @endif
+                <div class=""> </div>
               </div>
               <p>
                 <button type="submit">Publicar producto</button>

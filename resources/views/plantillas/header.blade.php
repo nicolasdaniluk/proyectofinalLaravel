@@ -3,8 +3,7 @@
 <nav>
   <div class="logo">
     <a href="/">
-      <img src="{{\Storage::url('img/kiosco.png')}}" alt="">
-      <h1>Tienda</h1>
+      <img src="{{\Storage::url('img/logo-2.png')}}" alt="">
     </a>
   </div>
   <div class="menu">

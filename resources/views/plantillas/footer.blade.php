@@ -16,6 +16,7 @@
       <li><a href="{{route('usuario.rangos')}}">Lista por Rangos |</a></li>
     @endif
   @endif
+    <li><a class="btn btn-sm btn-outline-secondary" name="boton">Cambiar Estilo de pagina </a></li>
   </ul>
   <ul class="redesfoot">
     <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>

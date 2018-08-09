@@ -22,6 +22,7 @@
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
+                                <div class=""> </div>
                             </div>
                         </div>
 
@@ -36,6 +37,7 @@
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
+                                <div class=""> </div>
                             </div>
                         </div>
 
@@ -50,6 +52,7 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
+                                <div class="invalid-feedback"> </div>
                             </div>
                         </div>
 
@@ -59,6 +62,7 @@
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
+                            <div class=""> </div>
                         </div>
 
                         <div class="form-group row">
@@ -69,6 +73,7 @@
                               @if ($errors->has('avatar'))
                                 <span class="text-danger">{{$errors->first('avatar')}}</span>
                               @endif
+                              <div class=""> </div>
                             </div>
                         </div>
 
@@ -79,6 +84,8 @@
                                     ¡Crear cuenta!
                                 </button>
                             </div>
+                            <label class="campo" style="color:white;"><a href="{{ route('login') }}">¡Ya tengo cuenta!</a></label>
+
                         </div>
                     </form>
                 </div>
@@ -86,4 +93,5 @@
         </div>
     </div>
 </div>
+<script  src="/js/signVal.js"></script>
 @endsection

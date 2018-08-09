@@ -23,7 +23,7 @@
           <span style="margin-right:20%; width:20%;">${{$producto->precio}}</span>
 
           @if ($user)
-            @if ($user->tipo_usuario==2 ||$user->tipo_usuario==3 )
+            @if ($producto->vendedor==$user->id || $user->tipo_usuario==2 ||$user->tipo_usuario==3 )
 
               <a href="{{route('producto.editar', [ 'id' => $producto->id ])}}"><span class="fas fa-pencil-alt"></span></a>
               <a href="{{route('producto.borrar', [ 'id' => $producto->id ])}}"><span class="fas fa-trash-alt"></span></a>

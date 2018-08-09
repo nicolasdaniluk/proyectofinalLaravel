@@ -11,34 +11,34 @@
             <div class="carousel-inner">
 
               <div class="carousel-item active">
-                <img class="first-slide" src="{{\Storage::url('img/10.jpg')}}" alt="First slide">
+                <img class="first-slide" src="{{\Storage::url('img/foto_principal.jpg')}}" alt="First slide">
                 <div class="container">
                   <div class="carousel-caption">
-                    <h1>Formá Parte!</h1>
-                    <p>Disfruta de todos los beneficios que te brinda el ser miembro la comunidad mas grandes de compra y venta de muebles y articulos para el hogar.</p>
-                    <p><a class="btn btn-lg btn-primary" href="/register" role="button">Unite aca</a></p>
+                    <h1>Ya somos <span id="contador">0</span> usuarios en la comunidad</h1>
+                    <p><a class="btn btn-lg btn-primary" href="/register" role="button">¡Sumate!</a></p>
+                    <p></p>
                   </div>
                 </div>
               </div>
 
               <div class="carousel-item">
-                <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+                <img class="second-slide" src="{{\Storage::url('img/foto_principal2.jpg')}}" alt="Second slide">
                 <div class="container">
                   <div class="carousel-caption">
-                    <h1>Another example headline.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <h1>Los mejores diseños</h1>
+                    <p>Buscá el estilo a la medida de tu hogar dentro de nuestras categorias.</p>
+                    <p><a class="btn btn-lg btn-primary" href="{{route('producto.categorias')}}" role="button">¡Navegalas!</a></p>
                   </div>
                 </div>
               </div>
 
               <div class="carousel-item">
-                <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+                <img class="third-slide" src="{{\Storage::url('img/foto_principal3.jpg')}}" alt="Third slide">
                 <div class="container">
                   <div class="carousel-caption">
-                    <h1>One more for good measure.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                    <h1>Furniture</h1>
+                    <p>Crea espacios tan audaces como tu espíritu con nuestros productos.</p>
+                    <p><a class="btn btn-lg btn-primary" href="{{route('producto.listar')}}" role="button">Encontrá el tuyo</a></p>
                   </div>
                 </div>
               </div>
@@ -55,7 +55,6 @@
           </div>
 
 
-
       <section>
         <h2>¿Qué nos caracteriza?</h2>
         <article class="atributo">
@@ -63,7 +62,10 @@
             <img src="img/circle.png" alt="">
           </div>
           <div class="atr_p">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <h2>Reclamos</h2>
+            <p>Si tenes algún problema. ¡No dudes en avisarnos!.
+Lo primero que tienes que hacer es iniciar un reclamo o comunicarte con nuestro centro de atención.
+Tenes 10 días desde que recibiste el producto para reclamar si no te llegó lo que esperabas o 21 días desde la fecha de compra, sino lo recibiste.</p>
           </div>
         </article>
         <article class="atributo">
@@ -71,7 +73,9 @@
             <img src="img/circle.png" alt="">
           </div>
           <div class="atr_p">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <h2>Envio</h2>
+            <p>Si elegis nuestro Shipping, acordamos un día y hora de entrega. Además, podes seguir tu compra hasta que llegue a tus manos con nuestro sistema de trackeo GPS o podes elegir una sucursal del correo más cercano te ir a buscarla cuando te sea posible. Es clave que recibir tu pedido no te sea un problema.
+</p>
           </div>
         </article>
         <article class="atributo">
@@ -79,11 +83,50 @@
             <img src="img/circle.png" alt="">
           </div>
           <div class="atr_p">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <h2> Medios de Pago</h2>
+            <p>
+Podes pagar en cuotas sin interés con tu tarjeta de crédito; al contado con tu tarjeta de débito o en efectivo en puntos de pago.
+Efectivo: cuando compres te daremos un código para que puedas pagar en cualquier sucursal adherida, ya sea rapipago, pagofacil, farmacity, o cualquiera de nuestros kioscos adheridos.</p>
           </div>
         </article>
       </section>
+      <section>
+        <h2>Algunos de nuestros productos</h2>
+        <article class="productos">
+          <div class="prod_img">
+              <a href="{{route('producto.ver', [ 'id' => 10 ])}}"><img src="/storage/img\muebles\escritorios\escritorio1.jpg" alt="escritorios"></a>
+          </div>
+        </article>
+        <article class="productos">
+          <div class="prod_img">
+              <a href="{{route('producto.ver', [ 'id' => 2 ])}}"><img src="\storage\img\muebles\mesas de tv\mesasdetv1.jpg" alt="mesas de tv"></a>
+          </div>
+        </article>
+        <article class="productos">
+          <div class="prod_img" >
+            <a href="{{route('producto.ver', [ 'id' => 4 ])}}"><img src="\storage\img\muebles\mesas\mesas1.jpg" alt="mesas" ></a>
 
+          </div>
+        </article>
+        <article class="productos">
+          <div class="prod_img">
+              <a href="{{route('producto.ver', [ 'id' => 20 ])}}"><img src="/storage/img\muebles\respaldo\respaldos1.jpg" alt="respaldos"></a>
+          </div>
+        </article>
+        <article class="productos">
+          <div class="prod_img">
+              <a href="{{route('producto.ver', [ 'id' => 4 ])}}"><img src="\storage\img\muebles\sillones\sillones1.jpg" alt="sillones"></a>
+          </div>
+        </article>
+        <article class="productos">
+          <div class="prod_img">
+            <a href="{{route('producto.ver', [ 'id' => 15 ])}}">  <img src="\storage\img\muebles\sillas\sillas1.jpg" alt="sillas"></a>
+          </div>
+        </article>
+      </section>
+      </main>
+
+    </select>
           <!-- carrousel2 -->
       <section class="carrousel2">
                 <div class="example__demo duo__cell">
@@ -99,6 +142,7 @@
                 </div>
 
       </section>
+    <script src="/js/contador/contador.js"></script>
     </main>
 
 @endsection

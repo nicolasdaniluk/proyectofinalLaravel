@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Producto;
 use App\Categorie;
+use App\User;
 
 class productosControlador extends Controller
 {
@@ -61,6 +62,8 @@ class productosControlador extends Controller
           $request->except(['_token'])
         );
       $producto->imagen=$rutaImg;
+      $user = Auth::user();
+      $producto->vendedor=$user->id;
       $producto->save();
 
         return redirect('/productos/listar');
@@ -99,10 +102,10 @@ class productosControlador extends Controller
     public function visualizar($id){
 
         $producto= Producto::find($id);
+        $vendedor=$producto->vendedor;
         $categoria=$producto->categoria;
         $categoria=Categorie::where('id', $categoria)->first();
-
-          return view('productos/ver')->with('producto',$producto)->with('categoria',$categoria);
+        $usuario=User::where('id', $categoria)->first();
+          return view('productos/ver')->with('producto',$producto)->with('categoria',$categoria)->with('usuario',$usuario);
     }
-
 }

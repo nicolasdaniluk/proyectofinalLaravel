@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class miControlador extends Controller
 {
@@ -23,4 +24,8 @@ class miControlador extends Controller
         return view('index');
     }
 
+    public function contador(){
+        $resp =User::count();
+        return response()->json($resp);
+    }
 }
